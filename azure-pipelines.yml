@@ -1,0 +1,26 @@
+# Starter pipeline
+- task: AzurePowerShell@4
+  inputs:
+    azureSubscription: 'WVD PoC(4af6c7c6-ccf7-45e5-9ade-97743bc5f3aa)'
+    ScriptType: 'InlineScript'
+    azurePowerShellVersion: 'LatestVersion'
+
+    
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
